@@ -9,7 +9,8 @@
     "build": "tsc",
     "start": "node dist/src/shared/infra/server.js",
     "dev": "ts-node-dev -r tsconfig-paths/register --exit-child --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/server.ts",
-    "prisma-migrate": "prisma migrate dev"
+    "prisma-migrate": "prisma migrate dev --name",
+    "prisma-generate": "prisma generate"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"

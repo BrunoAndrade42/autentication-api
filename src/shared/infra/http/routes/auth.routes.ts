@@ -5,6 +5,11 @@ import { ensureAuthenticated } from '@middlewares/ensureAuthenticated'
 
 const authenticateUserController = new AuthenticateUserController()
 
+const fn = (req, res, next) => {
+  console.log('authenticateUserController im here')
+  next()
+}
+
 const authRoutes = Router()
 
 authRoutes.post('/auth', authenticateUserController.handle)
